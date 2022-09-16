@@ -1,0 +1,150 @@
+/*start global values*/
+:root
+{
+    --white:#ffffff;
+    --light-black:#1c1c1c;
+    --text-font:#343434;
+    --bg-color:#f7f7f7;
+}
+body { font-family: 'Montserrat', sans-serif; }
+section{ padding-top: 100px; padding-bottom: 80px;}
+.sp-heading h1{font-size: 50px; font-weight: 800;}
+/*end global values*/
+/* start nav-bar  */
+@media (min-width:991px) {
+    .navbar .navbar-nav .nav-item .active::after {
+        content: "";
+        width: 70%;
+        height: 2px;
+        background-color: #1c1c1c;
+        position: absolute;
+        bottom: 2px;
+        right: 8px;
+        transition: 0.3s;
+        
+    }
+}
+/* end nav-bar  */
+/* start header  */
+header { 
+    width: 100%;
+    height: 100vh;
+    background-image: url(../imgs/bg.jpg); 
+    background-size: cover; 
+    background-attachment: fixed;
+    background-position: center center;
+    position: relative;
+}
+header::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: #00000094;
+    position: absolute;
+    z-index: 0;
+}
+header .container{ z-index: 1;} 
+header .container h5{ font-size: 50px; font-weight: 800;} 
+header .container .type{ font-size: 50px; font-weight: 600;} 
+header .container .type .typeing::after { content: ""; animation: typing 10s infinite ease-in-out;}
+header .container .type .cursur{  animation: cursur 0.5s infinite ease-in-out;}
+@keyframes typing {
+    1%{content:"I Am L";}
+    2%{content:"I Am La";}
+    3%{content:"I Am Lar";}
+    4%{content:"I Am Larr";}
+    5%{content:"I Am Larry";}
+    6%{content:"I Am Larry ";}
+    7%{content:"I Am Larry D";}
+    8%{content:"I Am Larry Da";}
+    9%{content:"I Am Larry Dan";}
+    10%{content:"I Am Larry Dani";}
+    11%{content:"I Am Larry Danie";}
+    12%{content:"I Am Larry Daniel";}
+    13%{content:"I Am Larry Daniels";}
+    25%{content:"I Am Larry Daniels";}
+    26%{content:"I Am Larry Daniel";}
+    27%{content:"I Am Larry Danie";}
+    28%{content:"I Am Larry Dani";}
+    29%{content:"I Am Larry Dan";}
+    30%{content:"I Am Larry Da";}
+    31%{content:"I Am Larry D";}
+    32%{content:"I Am Larry";}
+    33%{content:"I Am Larr";}
+    34%{content:"I Am Lar";}
+    35%{content:"I Am La";}
+    36%{content:"I Am L";}
+    40%{content:"I Am ";}
+    41%{content:"I Am D";}
+    42%{content:"I Am De";}
+    43%{content:"I Am Dev";}
+    44%{content:"I Am Deve";}
+    45%{content:"I Am Devel";}
+    46%{content:"I Am Develo";}
+    47%{content:"I Am Develop";}
+    48%{content:"I Am Develope";}
+    49%{content:"I Am Developer";}
+    60%{content:"I Am Developer";}
+    62%{content:"I Am Develope";}
+    62%{content:"I Am Develop";}
+    63%{content:"I Am Develo";}
+    64%{content:"I Am Devel";}
+    65%{content:"I Am Deve";}
+    66%{content:"I Am Dev";}
+    67%{content:"I Am De";}
+    68%{content:"I Am D";}
+    70%{content:"I Am ";}
+    71%{content:"I Am D";}
+    72%{content:"I Am De";}
+    73%{content:"I Am Des";}
+    74%{content:"I Am Desi";}
+    75%{content:"I Am Desig";}
+    76%{content:"I Am Design";}
+    77%{content:"I Am Designe";}
+    78%{content:"I Am Designer";}
+    90%{content:"I Am Designer";}
+    91%{content:"I Am Designe";}
+    92%{content:"I Am Design";}
+    93%{content:"I Am Desig";}
+    94%{content:"I Am Desi";}
+    95%{content:"I Am Des";}
+    96%{content:"I Am De";}
+    97%{content:"I Am D";}
+    98%{content:"I Am ";}
+    100%{content:"I Am ";}
+}
+@keyframes cursur { from { opacity: 0; }to { opacity: 100; }}
+/* end header  */
+/* start about */
+.about .container .img {width: 100%;}
+.about .container .buttons button:first-child:hover {background-color: transparent; color: var(--light-black);}
+.about .container .buttons button:last-child {background-color: transparent; color: var(--light-black);}
+.about .container .buttons button:last-child:hover {background-color: var(--light-black); color: var(--white);}
+/* end about */
+/* start services */
+.services ,.clint, .blog {background-color: var(--bg-color);}
+.services .container .card{border: none; box-shadow: 0px 0px 10px 0px #DDD;}
+.services .container .card svg{background-color: var(--bg-color); width: 30px; height: 30px; font-size: 1.5rem; transition: 0.5s;}
+.services .container .card:hover svg{background-color: var(--light-black); color: var(--white); font-size: 1.5rem;}
+/* end services */
+/* start work  */
+.work .row .imgs .over {width: calc(100% - 40px); height: calc(100% - 20px); transform:translate(20px , 10px); opacity: 0; transition: 0.5s;}
+.work .row .imgs .over svg {background-color: var(--light-black); color: var(--white);}
+.work .row .imgs:hover .over{opacity: 1;}
+/* end work  */
+/* start blog */
+.blog .my-card { background-color: var(--white); box-shadow: 0px 0px 10px 0px #DDD;}
+.blog .my-card span{ border-bottom:2px solid;}
+.blog .my-card .img{overflow: hidden; }
+.blog .my-card .img img{transition: 0.5s; transform: scale(1.1);}
+.blog .my-card:hover .img img{transform: scale(1.35);}
+/* end blog */
+/* start contact  */
+.contact svg{width:30px; height:30px; background-color: var(--bg-color); transition: 0.4s;}
+.contact .text:hover svg{width:30px; height:30px; background-color: var(--light-black); color: var(--white);}
+.contact .content .row input {background-color: var(--bg-color); border: none;height: 40px; }
+.contact .content .row input:focus {outline: none; }
+.contact .content .row textarea {background-color: var(--bg-color); border: none;height:180px; }
+.contact .content .row textarea:focus {outline: none; }
+.contact .content form button:hover {background-color: var(--white); color: var(--light-black); }
+/* end contact  */
